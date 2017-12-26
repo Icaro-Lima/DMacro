@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace DMacro
@@ -14,6 +9,28 @@ namespace DMacro
         public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void ButtonAddEvent_Click(object sender, EventArgs e)
+        {
+            ContextMenuStripAddEvent.Show(ButtonAddEvent, new Point(0, 0));
+        }
+
+        private void AddEvent(IEvent ievent)
+        {
+            if (ListBoxEvents.SelectedIndex == -1)
+            {
+                ListBoxEvents.Items.Add(ievent);
+            }
+            else
+            {
+                ListBoxEvents.Items.Insert(ListBoxEvents.SelectedIndex, ievent);
+            }
+        }
+
+        private void MouseLeftButtonClickToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddEvent(new MouseLeftButtonClick());
         }
     }
 }

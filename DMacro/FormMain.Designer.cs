@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ButtonAddEvent = new System.Windows.Forms.Button();
             this.ButtonRemoveSelected = new System.Windows.Forms.Button();
             this.ButtonConfigureHotkeys = new System.Windows.Forms.Button();
@@ -36,6 +37,16 @@
             this.ButtonStart = new System.Windows.Forms.Button();
             this.ButtonStop = new System.Windows.Forms.Button();
             this.ButtonRecord = new System.Windows.Forms.Button();
+            this.ContextMenuStripAddEvent = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MouseLeftButtonClickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tecladoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.KeyboardKeyPressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.variadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.WaitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PixelColorCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContextMenuStripAddEvent.SuspendLayout();
             this.SuspendLayout();
             // 
             // ButtonAddEvent
@@ -47,6 +58,7 @@
             this.ButtonAddEvent.TabIndex = 0;
             this.ButtonAddEvent.Text = "Adicionar evento";
             this.ButtonAddEvent.UseVisualStyleBackColor = true;
+            this.ButtonAddEvent.Click += new System.EventHandler(this.ButtonAddEvent_Click);
             // 
             // ButtonRemoveSelected
             // 
@@ -113,7 +125,73 @@
             this.ButtonRecord.Text = "Gravar";
             this.ButtonRecord.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // ContextMenuStripAddEvent
+            // 
+            this.ContextMenuStripAddEvent.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mouseToolStripMenuItem,
+            this.tecladoToolStripMenuItem,
+            this.variadosToolStripMenuItem});
+            this.ContextMenuStripAddEvent.Name = "ContextMenuStripAddEvent";
+            this.ContextMenuStripAddEvent.Size = new System.Drawing.Size(153, 92);
+            // 
+            // mouseToolStripMenuItem
+            // 
+            this.mouseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MouseLeftButtonClickToolStripMenuItem});
+            this.mouseToolStripMenuItem.Name = "mouseToolStripMenuItem";
+            this.mouseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mouseToolStripMenuItem.Text = "Mouse";
+            // 
+            // MouseLeftButtonClickToolStripMenuItem
+            // 
+            this.MouseLeftButtonClickToolStripMenuItem.Name = "MouseLeftButtonClickToolStripMenuItem";
+            this.MouseLeftButtonClickToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.MouseLeftButtonClickToolStripMenuItem.Text = "Click com botão esquerdo";
+            this.MouseLeftButtonClickToolStripMenuItem.Click += new System.EventHandler(this.MouseLeftButtonClickToolStripMenuItem_Click);
+            // 
+            // tecladoToolStripMenuItem
+            // 
+            this.tecladoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.KeyboardKeyPressToolStripMenuItem});
+            this.tecladoToolStripMenuItem.Name = "tecladoToolStripMenuItem";
+            this.tecladoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tecladoToolStripMenuItem.Text = "Teclado";
+            // 
+            // KeyboardKeyPressToolStripMenuItem
+            // 
+            this.KeyboardKeyPressToolStripMenuItem.Name = "KeyboardKeyPressToolStripMenuItem";
+            this.KeyboardKeyPressToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.KeyboardKeyPressToolStripMenuItem.Text = "Apertar tecla";
+            // 
+            // variadosToolStripMenuItem
+            // 
+            this.variadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.WaitToolStripMenuItem,
+            this.GotoToolStripMenuItem,
+            this.PixelColorCompareToolStripMenuItem});
+            this.variadosToolStripMenuItem.Name = "variadosToolStripMenuItem";
+            this.variadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.variadosToolStripMenuItem.Text = "Variados";
+            // 
+            // WaitToolStripMenuItem
+            // 
+            this.WaitToolStripMenuItem.Name = "WaitToolStripMenuItem";
+            this.WaitToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.WaitToolStripMenuItem.Text = "Esperar";
+            // 
+            // PixelColorCompareToolStripMenuItem
+            // 
+            this.PixelColorCompareToolStripMenuItem.Name = "PixelColorCompareToolStripMenuItem";
+            this.PixelColorCompareToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.PixelColorCompareToolStripMenuItem.Text = "Comparar cor de pixel";
+            // 
+            // GotoToolStripMenuItem
+            // 
+            this.GotoToolStripMenuItem.Name = "GotoToolStripMenuItem";
+            this.GotoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.GotoToolStripMenuItem.Text = "Ir para...";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,8 +204,9 @@
             this.Controls.Add(this.ButtonConfigureHotkeys);
             this.Controls.Add(this.ButtonRemoveSelected);
             this.Controls.Add(this.ButtonAddEvent);
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.Text = "DMacro";
+            this.ContextMenuStripAddEvent.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,6 +222,15 @@
         private System.Windows.Forms.Button ButtonStart;
         private System.Windows.Forms.Button ButtonStop;
         private System.Windows.Forms.Button ButtonRecord;
+        private System.Windows.Forms.ContextMenuStrip ContextMenuStripAddEvent;
+        private System.Windows.Forms.ToolStripMenuItem mouseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MouseLeftButtonClickToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tecladoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem KeyboardKeyPressToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem variadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem WaitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PixelColorCompareToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem GotoToolStripMenuItem;
     }
 }
 
