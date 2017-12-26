@@ -58,6 +58,7 @@
     <Compile Include="MouseInput.cs" />
     <Compile Include="MouseLeftButtonClick.cs" />
     <Compile Include="MouseOrKeyboardInput.cs" />
+    <Compile Include="Pixel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Wait.cs" />

@@ -4,9 +4,11 @@ namespace DMacro
 {
     class MouseLeftButtonClick : MouseInput, IEvent
     {
-        public void Run(Dictionary<string, object> variables)
+        public int Run(Dictionary<string, object> variables)
         {
             MouseSimulator.LeftButtonClick();
+
+            return -1;
         }
     }
 }

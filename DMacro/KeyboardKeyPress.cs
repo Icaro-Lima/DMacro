@@ -13,9 +13,11 @@ namespace DMacro
             VirtualKeyCode = (VirtualKeyCode)Enum.Parse(typeof(VirtualKeyCode), key);
         }
 
-        public void Run(Dictionary<string, object> variables)
+        public int Run(Dictionary<string, object> variables)
         {
             KeyboardSimulator.KeyPress(VirtualKeyCode);
+
+            return -1;
         }
     }
 }
