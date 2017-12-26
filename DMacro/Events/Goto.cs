@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace DMacro
 {
@@ -17,6 +14,11 @@ namespace DMacro
         public int Run(Dictionary<string, object> variables)
         {
             return LineToGo;
+        }
+
+        public override string ToString()
+        {
+            return "Ir para a linha " + LineToGo + ".";
         }
     }
 }

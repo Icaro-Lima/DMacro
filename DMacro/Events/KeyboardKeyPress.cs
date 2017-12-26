@@ -19,5 +19,10 @@ namespace DMacro
 
             return -1;
         }
+
+        public override string ToString()
+        {
+            return "Apertar a tecla " + VirtualKeyCode;
+        }
     }
 }

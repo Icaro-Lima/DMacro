@@ -10,5 +10,10 @@ namespace DMacro
 
             return -1;
         }
+
+        public override string ToString()
+        {
+            return "Clicar com o botão esquerdo do mouse.";
+        }
     }
 }
