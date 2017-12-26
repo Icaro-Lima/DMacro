@@ -53,15 +53,16 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="KeyboardInput.cs" />
-    <Compile Include="KeyboardKeyPress.cs" />
-    <Compile Include="MouseInput.cs" />
-    <Compile Include="MouseLeftButtonClick.cs" />
-    <Compile Include="MouseOrKeyboardInput.cs" />
-    <Compile Include="Pixel.cs" />
+    <Compile Include="Events\Goto.cs" />
+    <Compile Include="Events\KeyboardInput.cs" />
+    <Compile Include="Events\KeyboardKeyPress.cs" />
+    <Compile Include="Events\MouseInput.cs" />
+    <Compile Include="Events\MouseLeftButtonClick.cs" />
+    <Compile Include="Events\MouseOrKeyboardInput.cs" />
+    <Compile Include="Events\Pixel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wait.cs" />
+    <Compile Include="Events\Wait.cs" />
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>

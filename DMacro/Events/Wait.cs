@@ -14,9 +14,11 @@ namespace DMacro
             Milliseconds = milliseconds;
         }
 
-        public void Run(Dictionary<string, object> variables)
+        public int Run(Dictionary<string, object> variables)
         {
             System.Threading.Thread.Sleep(Milliseconds);
+
+            return -1;
         }
     }
 }
