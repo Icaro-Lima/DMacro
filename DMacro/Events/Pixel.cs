@@ -18,15 +18,15 @@ namespace DMacro
 
         private Color ColorToCompare;
         private Point Point;
-        private int LineToGoIfTrue;
-        private int LineToGoIfFalse;
+        private int LineToGoIfEquals;
+        private int LineToGoIfNotEquals;
 
-        public Pixel(Color colorToCompare, Point point, int lineToGoIfTrue, int lineToGoIfFalse)
+        public Pixel(Color colorToCompare, Point point, int lineToGoIfEquals, int lineToGoIfNotEquals)
         {
             ColorToCompare = colorToCompare;
             Point = point;
-            LineToGoIfTrue = lineToGoIfTrue;
-            LineToGoIfFalse = lineToGoIfFalse;
+            LineToGoIfEquals = lineToGoIfEquals;
+            LineToGoIfNotEquals = lineToGoIfNotEquals;
         }
 
         public int Run(Dictionary<string, object> variables)
@@ -38,17 +38,17 @@ namespace DMacro
 
             if (ColorToCompare == Color.FromArgb(255, (a >> 0) & 0xff, (a >> 8) & 0xff, (a >> 16) & 0xff))
             {
-                return LineToGoIfTrue;
+                return LineToGoIfEquals;
             }
             else
             {
-                return LineToGoIfFalse;
+                return LineToGoIfNotEquals;
             }
         }
 
         public override string ToString()
         {
-            return "Se a cor na posição " + Point + " for igual a cor " + ColorToCompare + ", vai para a linha " + LineToGoIfTrue + ", se não, vai para a linha " + LineToGoIfFalse;
+            return "Se a cor na posição " + Point + " for igual a cor " + ColorToCompare + ", vai para a linha " + LineToGoIfEquals + ", se não, vai para a linha " + LineToGoIfNotEquals;
         }
     }
 }

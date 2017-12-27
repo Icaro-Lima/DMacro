@@ -44,8 +44,9 @@
             this.KeyboardKeyPressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.variadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.WaitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PixelColorCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PixelColorCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListBoxEnumerated = new System.Windows.Forms.ListBox();
             this.ContextMenuStripAddEvent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,7 @@
             this.ButtonRemoveSelected.TabIndex = 1;
             this.ButtonRemoveSelected.Text = "Remover selecionado";
             this.ButtonRemoveSelected.UseVisualStyleBackColor = true;
+            this.ButtonRemoveSelected.Click += new System.EventHandler(this.ButtonRemoveSelected_Click);
             // 
             // ButtonConfigureHotkeys
             // 
@@ -84,9 +86,9 @@
             // 
             this.ListBoxEvents.FormattingEnabled = true;
             this.ListBoxEvents.IntegralHeight = false;
-            this.ListBoxEvents.Location = new System.Drawing.Point(12, 25);
+            this.ListBoxEvents.Location = new System.Drawing.Point(49, 25);
             this.ListBoxEvents.Name = "ListBoxEvents";
-            this.ListBoxEvents.Size = new System.Drawing.Size(804, 522);
+            this.ListBoxEvents.Size = new System.Drawing.Size(767, 522);
             this.ListBoxEvents.TabIndex = 3;
             // 
             // label1
@@ -139,7 +141,7 @@
             this.mouseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MouseLeftButtonClickToolStripMenuItem});
             this.mouseToolStripMenuItem.Name = "mouseToolStripMenuItem";
-            this.mouseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.mouseToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.mouseToolStripMenuItem.Text = "Mouse";
             // 
             // MouseLeftButtonClickToolStripMenuItem
@@ -154,14 +156,15 @@
             this.tecladoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.KeyboardKeyPressToolStripMenuItem});
             this.tecladoToolStripMenuItem.Name = "tecladoToolStripMenuItem";
-            this.tecladoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.tecladoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.tecladoToolStripMenuItem.Text = "Teclado";
             // 
             // KeyboardKeyPressToolStripMenuItem
             // 
             this.KeyboardKeyPressToolStripMenuItem.Name = "KeyboardKeyPressToolStripMenuItem";
-            this.KeyboardKeyPressToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.KeyboardKeyPressToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.KeyboardKeyPressToolStripMenuItem.Text = "Apertar tecla";
+            this.KeyboardKeyPressToolStripMenuItem.Click += new System.EventHandler(this.KeyboardKeyPressToolStripMenuItem_Click);
             // 
             // variadosToolStripMenuItem
             // 
@@ -178,24 +181,37 @@
             this.WaitToolStripMenuItem.Name = "WaitToolStripMenuItem";
             this.WaitToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.WaitToolStripMenuItem.Text = "Esperar";
-            // 
-            // PixelColorCompareToolStripMenuItem
-            // 
-            this.PixelColorCompareToolStripMenuItem.Name = "PixelColorCompareToolStripMenuItem";
-            this.PixelColorCompareToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.PixelColorCompareToolStripMenuItem.Text = "Comparar cor de pixel";
+            this.WaitToolStripMenuItem.Click += new System.EventHandler(this.WaitToolStripMenuItem_Click);
             // 
             // GotoToolStripMenuItem
             // 
             this.GotoToolStripMenuItem.Name = "GotoToolStripMenuItem";
             this.GotoToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
             this.GotoToolStripMenuItem.Text = "Ir para...";
+            this.GotoToolStripMenuItem.Click += new System.EventHandler(this.GotoToolStripMenuItem_Click);
+            // 
+            // PixelColorCompareToolStripMenuItem
+            // 
+            this.PixelColorCompareToolStripMenuItem.Name = "PixelColorCompareToolStripMenuItem";
+            this.PixelColorCompareToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.PixelColorCompareToolStripMenuItem.Text = "Comparar cor de pixel";
+            this.PixelColorCompareToolStripMenuItem.Click += new System.EventHandler(this.PixelColorCompareToolStripMenuItem_Click);
+            // 
+            // ListBoxEnumerated
+            // 
+            this.ListBoxEnumerated.FormattingEnabled = true;
+            this.ListBoxEnumerated.IntegralHeight = false;
+            this.ListBoxEnumerated.Location = new System.Drawing.Point(12, 25);
+            this.ListBoxEnumerated.Name = "ListBoxEnumerated";
+            this.ListBoxEnumerated.Size = new System.Drawing.Size(31, 522);
+            this.ListBoxEnumerated.TabIndex = 8;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(828, 588);
+            this.Controls.Add(this.ListBoxEnumerated);
             this.Controls.Add(this.ButtonRecord);
             this.Controls.Add(this.ButtonStop);
             this.Controls.Add(this.ButtonStart);
@@ -231,6 +247,7 @@
         private System.Windows.Forms.ToolStripMenuItem WaitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem PixelColorCompareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GotoToolStripMenuItem;
+        private System.Windows.Forms.ListBox ListBoxEnumerated;
     }
 }
 

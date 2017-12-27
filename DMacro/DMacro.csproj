@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Gma.System.MouseKeyHook, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MouseKeyHook.5.4.0\lib\net40\Gma.System.MouseKeyHook.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Event.cs" />
+    <Compile Include="FormAddSimpleKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddSimpleKey.Designer.cs">
+      <DependentUpon>FormAddSimpleKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormComparePixel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormComparePixel.Designer.cs">
+      <DependentUpon>FormComparePixel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGoto.Designer.cs">
+      <DependentUpon>FormGoto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +81,29 @@
     <Compile Include="Events\MouseLeftButtonClick.cs" />
     <Compile Include="Events\MouseOrKeyboardInput.cs" />
     <Compile Include="Events\Pixel.cs" />
+    <Compile Include="FormWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWait.Designer.cs">
+      <DependentUpon>FormWait.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\Wait.cs" />
+    <EmbeddedResource Include="FormAddSimpleKey.resx">
+      <DependentUpon>FormAddSimpleKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormComparePixel.resx">
+      <DependentUpon>FormComparePixel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGoto.resx">
+      <DependentUpon>FormGoto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWait.resx">
+      <DependentUpon>FormWait.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -8,9 +8,9 @@ namespace DMacro
     {
         private VirtualKeyCode VirtualKeyCode;
 
-        public KeyboardKeyPress(string key)
+        public KeyboardKeyPress(VirtualKeyCode keyCode)
         {
-            VirtualKeyCode = (VirtualKeyCode)Enum.Parse(typeof(VirtualKeyCode), key);
+            VirtualKeyCode = keyCode;
         }
 
         public int Run(Dictionary<string, object> variables)
