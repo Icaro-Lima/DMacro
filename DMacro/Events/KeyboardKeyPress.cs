@@ -22,7 +22,7 @@ namespace DMacro
 
         public override string ToString()
         {
-            return "Apertar a tecla " + VirtualKeyCode;
+            return "Apertar a tecla " + VirtualKeyCode + ".";
         }
     }
 }

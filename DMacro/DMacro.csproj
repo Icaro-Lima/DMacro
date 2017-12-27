@@ -81,6 +81,12 @@
     <Compile Include="Events\MouseLeftButtonClick.cs" />
     <Compile Include="Events\MouseOrKeyboardInput.cs" />
     <Compile Include="Events\Pixel.cs" />
+    <Compile Include="FormMouseMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMouseMove.Designer.cs">
+      <DependentUpon>FormMouseMove.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMouseMove.resx">
+      <DependentUpon>FormMouseMove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWait.resx">
       <DependentUpon>FormWait.cs</DependentUpon>

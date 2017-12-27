@@ -19,5 +19,10 @@ namespace DMacro
 
             return -1;
         }
+
+        public override string ToString()
+        {
+            return "Mover até a posição " + Point + ".";
+        }
     }
 }

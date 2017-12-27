@@ -47,6 +47,7 @@
             this.GotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PixelColorCompareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ListBoxEnumerated = new System.Windows.Forms.ListBox();
+            this.MoveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ContextMenuStripAddEvent.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,9 +140,10 @@
             // mouseToolStripMenuItem
             // 
             this.mouseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MoveToolStripMenuItem,
             this.MouseLeftButtonClickToolStripMenuItem});
             this.mouseToolStripMenuItem.Name = "mouseToolStripMenuItem";
-            this.mouseToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.mouseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mouseToolStripMenuItem.Text = "Mouse";
             // 
             // MouseLeftButtonClickToolStripMenuItem
@@ -156,7 +158,7 @@
             this.tecladoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.KeyboardKeyPressToolStripMenuItem});
             this.tecladoToolStripMenuItem.Name = "tecladoToolStripMenuItem";
-            this.tecladoToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.tecladoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.tecladoToolStripMenuItem.Text = "Teclado";
             // 
             // KeyboardKeyPressToolStripMenuItem
@@ -206,6 +208,13 @@
             this.ListBoxEnumerated.Size = new System.Drawing.Size(31, 522);
             this.ListBoxEnumerated.TabIndex = 8;
             // 
+            // MoveToolStripMenuItem
+            // 
+            this.MoveToolStripMenuItem.Name = "MoveToolStripMenuItem";
+            this.MoveToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.MoveToolStripMenuItem.Text = "Mover";
+            this.MoveToolStripMenuItem.Click += new System.EventHandler(this.MoveToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +257,7 @@
         private System.Windows.Forms.ToolStripMenuItem PixelColorCompareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem GotoToolStripMenuItem;
         private System.Windows.Forms.ListBox ListBoxEnumerated;
+        private System.Windows.Forms.ToolStripMenuItem MoveToolStripMenuItem;
     }
 }
 

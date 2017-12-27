@@ -87,5 +87,14 @@ namespace DMacro
                 AddEvent(new Pixel(formComparePixel.GetColorToCompare(), formComparePixel.GetPixelPosition(), formComparePixel.GetLineToGoIfEquals(), formComparePixel.GetLineToGoIfNotEquals()));
             }
         }
+
+        private void MoveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMouseMove formMouseMove = new FormMouseMove();
+            if (formMouseMove.ShowDialog(this) == DialogResult.OK)
+            {
+                AddEvent(new MouseMove(formMouseMove.GetPoint()));
+            }
+        }
     }
 }

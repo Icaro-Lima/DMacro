@@ -48,7 +48,7 @@ namespace DMacro
 
         public override string ToString()
         {
-            return "Se a cor na posição " + Point + " for igual a cor " + ColorToCompare + ", vai para a linha " + LineToGoIfEquals + ", se não, vai para a linha " + LineToGoIfNotEquals;
+            return "Se a cor na posição " + Point + " for igual a cor " + ColorToCompare + ", vai para a linha " + LineToGoIfEquals + ", se não, vai para a linha " + LineToGoIfNotEquals + ".";
         }
     }
 }
