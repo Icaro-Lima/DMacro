@@ -87,6 +87,7 @@
     <Compile Include="FormWait.Designer.cs">
       <DependentUpon>FormWait.cs</DependentUpon>
     </Compile>
+    <Compile Include="Events\MouseMove.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Events\Wait.cs" />
